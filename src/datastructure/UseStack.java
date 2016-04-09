@@ -8,6 +8,10 @@ public class UseStack {
 		 * Use For Each loop and while loop with Iterator to retrieve data.
 		 * 
 		 */
+
+
+
 	}
+
 
 }
