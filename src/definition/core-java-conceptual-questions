@@ -6,17 +6,28 @@ What is IDE?
 What are the IDEs available in the market to support java?
 Explain the entire java life cycle.
 what is class?
+Class is the blue print of an object
 What is object?
+An instance of a class
 What is the entry point of an application?
+main method
 Why main is static?
+Main is static so that we don't need to object to initiate the class 
 What is the difference between an Interface and Abstract class?
+Interface cantain the defination of method while Abstract class has concrate method which are ready to be used.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+No. Interface or Abstract class must be impelemented on a concriate class. 
 what is Access Specifier?
+Access modifiers are a specific part of programming language syntax used to facilitate the encapsulation of components
+
 What is OOP ? Define each feature of java OOP.
 What is API? Name list of API that you have used so far.
 Does java support multiple inheritance?
+No.
 What is method overloading and when it happens?
+Overloading is writing multiple method using differnt signature. It happens in complile time.
 What is method overriding and when it happens?
+Overriding is overwritting a method from its superclass. It happens in runtime.
 Explain exceptions in java and how to handle it.
 What is static keyword in java? How it has been used in variables and methods ?
 What is final and how it has been used variables and methods?
@@ -25,9 +36,13 @@ What is a constructor ?
 What is "this" keyword in java ?
 What is "super" keyword in java?
 What is JVM stand for ?
+Java Virtual Machine
 What version of java are you using?
+
 What is JAR stand for ?
+
 What is compile time and run time?
+
 What is heap?
 How java manage it's memory?
 What is the difference between String, StringBuffer and StringBuilder?
