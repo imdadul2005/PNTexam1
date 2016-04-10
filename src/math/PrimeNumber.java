@@ -9,7 +9,7 @@ public class PrimeNumber {
 		 * Out put number of Prime numbers on the given range.
 		 * 
 		 */
-
+		
 	}
 
 }

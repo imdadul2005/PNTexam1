@@ -47,7 +47,7 @@ public class XmlReader {
 						student.lastName = content;
 						break;
 					case "score":
-						student.score = convertIntToChar(content);  
+						student.score = convertIntToChar(content);
 						break;	
 					}
 				}
@@ -58,13 +58,21 @@ public class XmlReader {
 	 }
 	return list;		
   }
-	
+	// You need to implement the method name "convertIntToChar()" which will convert String score into char Grade.('A'for 90 to 100,'B'for 80 to 89 and
+	//'C' for 70 to 79.
 	//This convert method need to be implemented.
 	public String convertIntToChar(String score){
+		int val = Integer.parseInt(score);
 		String grade = "";
-		
-		
+		if (val>89)
+			grade = "A";
+		else if (val<89 || val> 88)
+			grade = "B";
+		else if (val>69 || val < 80)
+			grade = "C";
 		return grade;	
 	}
+
+
 	
 }

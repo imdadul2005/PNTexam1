@@ -1,9 +1,14 @@
 package students.data.processing;
 
 import org.xml.sax.SAXException;
+import xml.parser.Student;
+import xml.parser.XmlReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
+
+import java.util.List;
 
 public class ProcessStudentInfo {
 
@@ -28,29 +33,33 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/xml/reader/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/xml/reader/qtp.xml";
+				String pathQtp = System.getProperty("user.dir") + "\\src\\xml\\parser\\qtp.xml";
+				String pathSelenium = System.getProperty("user.dir") + "\\src\\xml\\parser\\selenium.xml";
 				String tag = "id";
 				
 				//Declare a Map with List<String> into it.
-				
+
 				
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
-				
-				
-				
+
+
+				List<Student> qtpStudent = new ArrayList<Student>();
+				List<Student> seleniumStudent = new ArrayList<Student>();
+
+
 				//Create XMLReader object.
+				XmlReader xml = new XmlReader();
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
-				
+				seleniumStudent = xml.parseData(tag,pathSelenium);
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
+				qtpStudent = xml.parseData(tag,pathQtp);
 				//add Selenium ArrayList data into map.
-			
+
+
 				//add Qtp ArrayList data into map.
-		
-		      	
+
 				//Retrieve map data and display output.
 
 				
