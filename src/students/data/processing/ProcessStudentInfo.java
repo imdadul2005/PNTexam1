@@ -6,9 +6,7 @@ import xml.parser.XmlReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import java.util.List;
+import java.util.*;
 
 public class ProcessStudentInfo {
 
@@ -39,7 +37,7 @@ public class ProcessStudentInfo {
 				
 				//Declare a Map with List<String> into it.
 
-				
+				Map<String, List<Student>> map = new HashMap<String, List<Student>>();
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
 
@@ -57,12 +55,28 @@ public class ProcessStudentInfo {
 				qtpStudent = xml.parseData(tag,pathQtp);
 				//add Selenium ArrayList data into map.
 
+				map.put("Selenium",seleniumStudent);
+
 
 				//add Qtp ArrayList data into map.
+				map.put("QTP",qtpStudent);
+
 
 				//Retrieve map data and display output.
 
-				
+				Iterator<Map.Entry<String, List<Student>>> ite = map.entrySet().iterator();
+				System.out.println(".....................................................");
+				while (ite.hasNext()){
+					Map.Entry pair = (Map.Entry) ite.next();
+					printList( (List<Student>) pair.getValue());  // Since pair.getValue() return value as object type this needs to be changed to Arraylist to print as expected.
+				}
+				System.out.println(".....................................................");
 			}
 
+
+			public static void printList(List<Student> arrayTest) {
+				for (Student student: arrayTest)
+					System.out.println(student  + " ");
+				System.out.println();
+			}
 }
