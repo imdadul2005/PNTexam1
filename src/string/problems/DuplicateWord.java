@@ -20,15 +20,20 @@ public class DuplicateWord {
         String[] stString = st.split(" ");
        // st.r
         Map<String, Integer> wordBank = new HashMap<String, Integer>();
+        float averageLPW = 0f;
+        int totalWordCount =0;
+        int totalCharCount =0;
 
 
         for (int i = 0; i < stString.length; i++) {
             // Only add to HashMap if String is not null
             int numOfSameWord;
 
-            if (stString[i] != "") {
+            if (!stString[i].isEmpty()) {
                 String word = stString[i];
                 // Need to check if word already exist
+                totalCharCount = totalCharCount + word.length();
+                totalWordCount ++;
                 if (wordBank.containsKey(word)) {
                     numOfSameWord = wordBank.get(word);
                     numOfSameWord++;
@@ -38,8 +43,13 @@ public class DuplicateWord {
             }
         }
 
+        averageLPW = (float) totalCharCount/totalWordCount;
         System.out.println("wordBank = " + wordBank);
-        System.out.println("Average lenght of word is : " + st.length()/stString.length) ;
+        System.out.println("Average lenght of word is : " + averageLPW) ;
+    }
+
+    public void timeOfOccurance (Map<String, Integer> wordBank){
+
     }
 }
 

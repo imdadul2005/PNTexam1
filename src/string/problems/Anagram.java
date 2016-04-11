@@ -1,6 +1,6 @@
 package string.problems;
 
-import javax.print.DocFlavor;
+
 import java.util.Scanner;
 
 /**
@@ -29,10 +29,10 @@ public class Anagram {
         }
 
         //Check is the char are same on this two word
-        if (!isSameChar(firstWord, secondWord))
-            System.out.println("Opes not a Anagram Word");
-        else
+        if (isSameChar(firstWord, secondWord)&&(isSameChar(secondWord,firstWord)))
             System.out.println("You have found an Anagram word");
+        else
+            System.out.println("Opes not a Anagram Word");
     }
 
     public static boolean isNumberOfCharSame(String first, String second){
