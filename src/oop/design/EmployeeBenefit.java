@@ -3,8 +3,6 @@ package oop.design;
 /**
  * Created by Imdadul on 4/9/2016.
  */
-public class EmployeeDetail {
-
-
+public abstract class EmployeeBenefit {
 
 }
